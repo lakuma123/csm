@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -14,18 +14,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #00031a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(158, 36, 36);
 }
 
 .App-link {
-  color: #61dafb;
+  color: #aac417;
 }
 
 @keyframes App-logo-spin {
@@ -33,6 +33,55 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(45deg);
   }
+} */
+
+.App {
+  text-align: left;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+body{
+  margin: 0%;
+  padding: 0%;
+}
+.Sidebar {
+  height:100%;
+  width: 250px;
+  background-color: rgb(224 220 212 / 20%);
+}
+.SidebarList{
+  padding-left:0%;
+}
+
+.SidebarList .row{
+  width: 100%;
+  height: 60px;
+  list-style-type: none;
+  margin: 0%;
+  display: flex;
+  flex-direction: row;
+  color:#0d01ca;
+  justify-content: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.SidebarList .row:hover {
+cursor: pointer;
+background-color: #0d01ca;
+color: white;
+}
+
+.row #icon{
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.row #title{
+  flex: 70%;
+  display: grid;
+  align-content: center;
 }
