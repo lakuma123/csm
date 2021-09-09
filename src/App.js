@@ -1,52 +1,35 @@
-// import './App.css';
-// import Dashboard from './components/Dashboard';
-// import React,{ Component } from 'react';
-
-// class  App extends Component {
-//   // constructor(props) {
-//   //   super(props);
-//   //   this.handleClick = this.handleClick.bind(this);
-//   // }
-//   handleClick() {
-//     console.log('Click happened');
-//     <Dashboard/>
-//   }
-    
-//   render(){
-//     return <div className="App">
-//          <h1>Please Log In</h1>
-//       <form>
-//         <label>
-//           <p>Username</p>
-//           <input type="text" />
-//         </label>
-//         <label>
-//           <p>Password</p>
-//           <input type="password" />
-//         </label>
-//         <div>
-//           <button type="submit" onClick={this.handleClick}>Submit 
-//            </button>
-
-
-//         </div>
-//       </form>
-//     </div>
-//   };
-// }
-
-// export default App;
-
-
 import './App.css';
 import Sidebar from './Navigation pane/Sidebar';
 import Dashboard from './components/Dashboard'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import UploadFiles from './components/UploadFiles';
+import Header from './components/Header';
 
 function App(){
-  return( 
-  <div className='App'>
-    <Sidebar />
-    </div>
+  // return( 
+  // <div className='App'>
+  //   <Sidebar />
+  //   </div>
+  // );
+  return (
+    <>
+    <Header className='header'></Header>
+      <Router>
+        <div className = 'main'>
+        <span className='navigation'>
+        <Sidebar />
+        </span>
+        <span className='body'>
+        <Switch>
+          <Route path='/' exact component={Dashboard} />
+          <Route path='/Upload' component={UploadFiles} />
+          <Route path='/Reporting' component={Dashboard} />
+          
+        </Switch>
+        </span>
+        </div>
+      </Router>
+    </>
   );
 
 } 

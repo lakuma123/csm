@@ -1,42 +1,3 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #00031a;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(158, 36, 36);
-}
-
-.App-link {
-  color: #aac417;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(45deg);
-  }
-} */
-
 .App {
   text-align: left;
   width: 100vw;
@@ -52,8 +13,24 @@ body{
   width: 250px;
   background-color: rgb(224 220 212 / 20%);
 }
+.sidebarrow{
+  background-color: rgb(224 220 212 / 20%);
+}
+.body{
+  width:70%;
+}
 .SidebarList{
   padding-left:0%;
+  width: 100%;
+  margin-top: 2px;
+}
+.navigation{
+  padding-left:0%;
+  width: 20%;
+  background-color: rgb(224 220 212 / 20%);
+}
+.main{
+display:flex; flex-direction:row;
 }
 
 .SidebarList .row{
@@ -84,4 +61,58 @@ color: white;
   flex: 70%;
   display: grid;
   align-content: center;
+}
+
+
+.header{
+  height: 80px;
+  width: 100%;
+  
+}
+.headerbar{
+  height: 80px;
+  width: 100%;
+  background-color: #0d01ca;
+}
+.headerbar #brand{
+  font-size: 50px;
+    font-style: revert;
+    color: white;
+    padding-left: 20px;
+    font-weight: 500;
+}
+.headerbar #project{
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+  padding-left: 60px;
+  font-weight: 600;
+  height: 50px;
+}
+.headerbar #welcome{
+  font-style: revert;
+  color: white;
+  padding-left: 700px;
+  font-weight: 600;
+}
+.headerbar #vertical{
+  border-left: 1px solid white;
+  height: 45px;
+  position: absolute;
+  margin: 20px;
+}
+.headerbar #logout{
+  font-style: revert;
+  color: white;
+  padding-left: 20px;
+  font-weight: 600;
+}
+.headerbar #logo{
+    height: 60px;
+    align-content: center;
+    margin: 10px;
+}
+.headerbar #image{
+  height: 50px;
+  margin-top: 10px;
 }
