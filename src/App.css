@@ -18,6 +18,7 @@ body{
 }
 .body{
   width:70%;
+  margin-left: 10px;
 }
 .SidebarList{
   padding-left:0%;
@@ -40,14 +41,14 @@ display:flex; flex-direction:row;
   margin: 0%;
   display: flex;
   flex-direction: row;
-  color:#0d01ca;
+  color:#005ca9;
   justify-content: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .SidebarList .row:hover {
 cursor: pointer;
-background-color: #0d01ca;
+background-color: #005ca9;
 color: white;
 }
 
@@ -72,7 +73,7 @@ color: white;
 .headerbar{
   height: 80px;
   width: 100%;
-  background-color: #0d01ca;
+  background-color: #005ca9;
 }
 .headerbar #brand{
   font-size: 50px;
@@ -115,4 +116,33 @@ color: white;
 .headerbar #image{
   height: 50px;
   margin-top: 10px;
+}
+
+.browse {
+margin-left: 20px;
+margin-right: 20px;
+background-color: #005ca9;
+color: white;
+border: 0;
+height: 25px;
+font-weight: 500;
+width: 75px;
+}
+.dropdown{
+  width: 30%;
+  border: 0;
+  box-shadow: 1px 1px grey;
+  margin-bottom: 20px;
+  height: 25px;
+}
+.upload{
+  background-color: #005ca9;
+  color: white;
+  border: 0;
+  height: 25px;
+  font-weight: 500;
+  width: 75px;
+}
+.UploadFilesHeading{
+color:#005ca9;
 }

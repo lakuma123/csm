@@ -13,7 +13,7 @@ function App(){
   // );
   return (
     <>
-    <Header className='header'></Header>
+    {/* <Header className='header'></Header> */}
       <Router>
         <div className = 'main'>
         <span className='navigation'>
