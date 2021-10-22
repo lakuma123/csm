@@ -25,12 +25,14 @@ export default function SelectVariants() {
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={"jhh"}>hvh</MenuItem>
+          <MenuItem value={"hh"}>ghgh</MenuItem>
+          <MenuItem value={"h"}>hv</MenuItem>
         </Select>
       </FormControl>
       
     </div>
   );
+}
+
 }
