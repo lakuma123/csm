@@ -1,38 +1,56 @@
-import * as React from 'react';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-
-export default function SelectVariants() {
-  const [age, setAge] = React.useState('');
-
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
-
-  return (
-    <div>
-      <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-standard-label">Age</InputLabel>
-        <Select
-          labelId="demo-simple-select-standard-label"
-          id="demo-simple-select-standard"
-          value={age}
-          onChange={handleChange}
-          label="Age"
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={"jhh"}>hvh</MenuItem>
-          <MenuItem value={"hh"}>ghgh</MenuItem>
-          <MenuItem value={"h"}>hv</MenuItem>
-        </Select>
-      </FormControl>
-      
-    </div>
-  );
+export const SERVICES = {
+    ENV:                'dev',
+    HOST:                                    "",
+    GET_SSIM_PATH:                            "",
+    GET_CLASSMAPPING_PATH:                    "",
+    GET_PERMANENTITEMS_PATH:                  "",
 }
 
+export function urlBuilder(section){
+    switch(section){
+        case 'GET_SSIM':
+            return `${SERVICES.HOST}${SERVICES.GET_SSIM_PATH}`;
+            case 'GET_CLASSMAPPING':
+            return `${SERVICES.HOST}${SERVICES.GET_CLASSMAPPNG_PATH}`;
+            case 'GET_PERMANENTITEMS':
+            return `${SERVICES.HOST}${SERVICES.GET_PERMANENTITEMS_PATH}`;
+        default:
+            return;
+    }
 }
+
+--
+ import { SERVICES, urlBuilder } from "./config";
+ export const rester = {
+     getSsimData: () => {
+         const url = urlBuilder('GET_SSIM');
+         return executeRequest(url, GET);    
+     },
+     getClassMappingData: () => {
+         const url = urlBuilder('GET_CLASSMAPPING')
+         return executeRequest(url, GET);
+     },
+     getPetmanentData: () => {
+         const url = urlBuider('GET_PERMANENTITEMS')
+         return executeRequest(url, GET);
+     }
+ }
+ const executeRequest = (url, method, payload= {}) => {
+let body = {
+    method: method,
+    Credentials: 'include',
+    headers: new Headers( {
+        'Content-Type' : 'application/json',
+        'Accept' : 'application/json'
+    })
+}
+if(method === POST || method === DELETE){
+    body.body = JSON.stringify(payload);
+}
+
+return fetch(url,body).then(response => response.json())
+ }
+
+ const GET = 'GET';
+ const POST = 'POST';
+ const DELETE = 'DELETE'
